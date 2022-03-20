@@ -65,5 +65,13 @@ usermod -aG docker docker
 printf "Creating folder structure.\n"
 cd $path
 
-# make and mount data directory
+
+# make data directory
 mkdir $path/data
+# mount data directory off of NFS server
+printf "$3 $path/data nfs _netdev,rw,hard,intr 0 0" >> /etc/fstab
+mount -a
+
+
+# create config directory
+git clone $git 
