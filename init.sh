@@ -2,7 +2,7 @@
 
 #help function
 function usage(){
-	printf "\nUsage: $0 [ IP of server ] [ Directory for git storage ]\n
+	printf "\nUsage: $0 [ IP of server ]\n
 	Options:
 		[ IP of server ] - self explanatory."
 	exit 1
